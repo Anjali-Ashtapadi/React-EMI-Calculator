@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import '../assets/Calculator.css'
+import PieChart from './Chart';
 function Calculator(){
 
   const [formdata,setFormData] = useState({
@@ -99,7 +100,16 @@ function Calculator(){
         
         <p><strong>Total Interest:</strong> ₹ {totalInterest}</p>
     <p><strong>Total Payable:</strong> ₹ {totalAmount}</p>
+<br />
+    <div className="chart">
+      <PieChart
+        principal={Number(principal)}
+        interest={Number(totalInterest)}
+      />
+    </div>
       </div>)}
+
+      
     </div>
   )
 }
